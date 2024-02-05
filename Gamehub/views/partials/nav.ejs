@@ -1,0 +1,8 @@
+<nav>
+  <ul>
+    <li><a href="/">Accueil</a></li>
+    <% for (const game of locals.games) { %>
+    <li><a href="/game/<%= game.name %>"><%= game.title %></a></li>
+    <% } %>
+  </ul>
+</nav>

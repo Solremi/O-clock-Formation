@@ -1,0 +1,15 @@
+<%- include("partials/header") %>
+    <%# contenu spécifique à la page %>
+        <main>
+            <h2> Bienvenue dans la liste des promotions </h2>
+            <ul class="cards">
+                <%# boucle de logique du traitement des promos %>
+                    <% for(promo of locals.promos) { %>
+                        <li class=" card card--label">
+                            <%= promo.id %> -- <%= promo.name %> -- <%= promo.github_organization %> <a
+                                            href="/promo/<%= promo.id %>">Voir la promo</a>
+                        </li>
+                        <% } %>
+            </ul>
+        </main>
+        <%- include("partials/footer") %>

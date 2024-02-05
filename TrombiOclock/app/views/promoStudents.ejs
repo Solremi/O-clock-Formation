@@ -1,0 +1,14 @@
+<%- include("partials/header") %>
+    <h2> Étudiant de la promo <%= promo.name %>
+    </h2>
+
+    <ul>
+        <% for(const student of students) { %>
+            <li>
+                <%= student.first_name %>
+                    <%= student.last_name %>
+            </li>
+            <% } %>
+    </ul>
+
+    <%- include("partials/footer") %>

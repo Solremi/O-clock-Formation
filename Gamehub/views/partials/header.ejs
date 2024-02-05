@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= locals.siteName %></title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining -->
+    <% if(locals.selectedGame?.cssFile){ %>
+    <link rel="stylesheet" href="/css/<%= locals.selectedGame.cssFile%>" />
+    <% } %>
+  </head>
+
+  <body>
+    <header>
+      <h1><%= locals.siteName %></h1>
+      <%- include('nav') %>
+    </header>
+
